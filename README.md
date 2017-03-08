@@ -1,6 +1,7 @@
 ![status](https://secure.travis-ci.org/gabceb/node-metainspector.png?branch=master)
 
-## Node-Metainspector
+## FSS-Node-Metainspector
+*Note: This is a patched version of node-metainspector for use in Follett projects. Patches should be committed only on branches off the master branch. Once a patch has been finalized a PR should be issued from the patch branch against the original repo. Additionally that branch should be merged into the "patched" branch so that dependent projects can use the patched code before the PR is merged into the original project. Finally be sure to publish the new patched version to the internal Follett npm registry and increment the version patch number so that dependent projects can pick up the changes.*
 
 MetaInspector is an npm package for web scraping purposes. You give it an URL, and it lets you easily get its title, links, images, description, keywords, meta tags....
 
@@ -76,4 +77,3 @@ You're welcome to fork this project and send pull requests. Just remember to inc
 Copyright (c) 2009-2012 Gabriel Cebrian, released under the MIT license
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/gabceb/node-metainspector/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
