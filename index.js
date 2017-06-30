@@ -151,6 +151,19 @@ MetaInspector.prototype.getMetaDescription = function()
 	return this;
 }
 
+MetaInspector.prototype.elemContainsTag = function(elem,tag) {
+	if ( elem.type == tag ) {
+		return true;
+	} else if ( elem.children != undefined ) {
+		for ( let i = 0; i < elem.children.length; i++) {
+			if ( this.elemContainsTag(elem.children[i], tag) ) {
+				return true;
+			}
+		}
+	}
+	return false
+}
+
 MetaInspector.prototype.getSecondaryDescription = function()
 {
 	debug("Parsing page secondary description");
@@ -164,12 +177,12 @@ MetaInspector.prototype.getSecondaryDescription = function()
 			if(_this.description){
 				return;
 			}
-
-			var text = _this.parsedDocument(this).text();
-
-			// If we found a paragraph with more than
-			if(text.length >= minimumPLength) {
-				_this.description = text;
+			if ( ! _this.elemContainsTag(elem,"script")) {
+				var text = _this.parsedDocument(this).text();
+				// If we found a paragraph with more than
+				if(text.length >= minimumPLength) {
+					_this.description = text;
+				}
 			}
 		});
 	}
