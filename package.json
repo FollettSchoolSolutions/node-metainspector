@@ -4,6 +4,9 @@
   "version": "1.3.2",
   "homepage": "http://github.com/gabceb/node-metainspector",
   "repository": "git://github.com/gabceb/node-metainspector.git",
+  "publishConfig": {
+        "registry": "http://nexus.fsc.follett.com/nexus/repository/npm-releases"
+  },
   "author": "Gabriel Cebrian <gabceb@gmail.com> (http://about.me/gabceb)",
   "main": "./index.js",
   "dependencies": {
