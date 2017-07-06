@@ -151,12 +151,12 @@ MetaInspector.prototype.getMetaDescription = function()
 	return this;
 }
 
-MetaInspector.prototype.elemContainsTag = function(elem,tag) {
-	if (elem.name && elem.name === tag ) {
+MetaInspector.prototype.elemContainsTag = function(elem,tagName) {
+	if (elem.name && elem.name === tagName ) {
 		return true;
 	} else if ( elem.children != undefined ) {
 		for ( let i = 0; i < elem.children.length; i++) {
-			if ( this.elemContainsTag(elem.children[i], tag) ) {
+			if ( this.elemContainsTag(elem.children[i], tagName) ) {
 				return true;
 			}
 		}
