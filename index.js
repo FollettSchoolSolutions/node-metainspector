@@ -152,7 +152,7 @@ MetaInspector.prototype.getMetaDescription = function()
 }
 
 MetaInspector.prototype.elemContainsTag = function(elem,tagName) {
-	if (elem.name && elem.name === tagName ) {
+	if (elem.tagName && elem.tagName === tagName ) {
 		return true;
 	} else if ( elem.children != undefined ) {
 		for ( let i = 0; i < elem.children.length; i++) {
