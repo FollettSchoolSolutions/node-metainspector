@@ -155,7 +155,7 @@ MetaInspector.prototype.elemContainsTag = function(elem,tagName) {
 	if (elem.tagName && elem.tagName === tagName ) {
 		return true;
 	} else if ( elem.children != undefined ) {
-		for ( let i = 0; i < elem.children.length; i++) {
+		for ( var i = 0; i < elem.children.length; i++) {
 			if ( this.elemContainsTag(elem.children[i], tagName) ) {
 				return true;
 			}
