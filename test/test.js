@@ -360,33 +360,4 @@ describe('metainspector', function(){
 		});
 	});
 
-	describe('elemContainsTag', function() {
-		it("should return true for any tag that holds a script tag and false otherwise", function (done) {
-			var client = new MetaInspector("http://scriptinptag.html", {});
-			client.once("fetch", function(){
-				client.parsedDocument("p").each(function (i, elem) {
-					switch (i) {
-						case 0:
-							client.elemContainsTag(elem, "script").should.equal(true);
-							break;
-						default:
-							client.elemContainsTag(elem, "script").should.equal(false);
-							break;
-					}
-				});
-				client.parsedDocument("a").each(function (i, elem) {
-					switch (i) {
-						case 2: // 3rd a tag in html: the Login link
-							client.elemContainsTag(elem, "span").should.equal(true);
-							break;
-						default:
-							client.elemContainsTag(elem, "span").should.equal(false);
-							break;
-					}
-				});
-				done();
-			});
-			client.fetch();
-		});
-	});
 });
