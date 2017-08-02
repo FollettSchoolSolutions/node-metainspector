@@ -312,11 +312,10 @@ describe('metainspector', function(){
 			client.fetch();
 		});
 
-		it('should emit errors', function(done){
-			client = new MetaInspector("http://www.google-404.com/", {});
+		it('should emit errors on http error response', function(done){
+			client = new MetaInspector("http://www.404-response.com", {});
 
 			client.once("error", function(error){
-				should.exists(error);
 				done();
 			});
 
