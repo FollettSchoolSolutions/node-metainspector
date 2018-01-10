@@ -4,3 +4,8 @@ node_modules
 build
 *.node
 components
+.idea/
+*.iml
+test/
+makefile
+Gruntfile.js

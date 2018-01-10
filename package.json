@@ -5,6 +5,10 @@
   "homepage": "https://github.com/FollettSchoolSolutions/fss-node-metainspector",
   "repository": "git://github.com/FollettSchoolSolutions/fss-node-metainspector.git",
   "author": "Gabriel Cebrian <gabceb@gmail.com> (http://about.me/gabceb)",
+  "contributors": [
+    { "name" : "David Chwalisz", "email" : "dchwalisz@follett.com", "url" : "https://github.com/dcfsc" },
+    { "name" : "Chris Keach", "email" : "fsskeach@gmail.com", "url" : "https://github.com/fsskeach" }
+  ],
   "main": "./index.js",
   "dependencies": {
     "cheerio": "~0.19.0",
