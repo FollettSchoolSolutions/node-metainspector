@@ -238,6 +238,12 @@ MetaInspector.prototype.getImage = function()
 			this.image = this.getAbsolutePath(img);
 		}
 	}
+	if (!this.image ) {
+		img = this.parsedDocument("meta[property='og:image:url']").attr("content");
+		if (img){
+			this.image = this.getAbsolutePath(img);
+		}
+	}
 
 	return this;
 }
